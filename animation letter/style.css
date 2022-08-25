@@ -1,0 +1,71 @@
+body {
+	background-color: black;
+}
+* {
+	color: white;
+	font-family: 'Dancing Script', cursive;
+}
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 600px;
+	height: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px white solid;
+}
+.name {
+	display: flex;
+	flex-direction: row;
+		align-items: center;
+}
+.first-letter {
+	font-size: 7em;
+	animation-name: first-letter;
+	animation-duration: 3s;
+	animation-delay: 1s;
+	transform-origin: bottom;
+	animation-fill-mode: backwards;
+}
+@keyframes first-letter {
+	0% { opacity: 0; transform: translateY(200px); }
+	20% {opacity: 0;}
+	100% {opacity: 1; transform: translateY(0px); }
+}
+.other-letter {
+	position: relative;
+	top: 25px;
+	font-size: 2em;
+	letter-spacing: 5px;
+	/*animation*/
+		animation-name: other-letter;
+	animation-duration: 2s;
+	animation-delay: 3s;
+	transform-origin: left;
+	animation-fill-mode: backwards;
+}
+@keyframes other-letter {
+	0% { opacity: 0; transform: scaleX(0); }
+	90% { transform: scaleX(1.0); }
+	100% {opacity: 1; transform: scaleX(1.0); }
+}
+.underline {
+	width: 363px;
+	height: 5px;
+	color: white;
+	background: linear-gradient(90deg, rgba(255,255,255,1) 70%, rgba(0,0,0,1) 95%, rgba(0,0,0,1) 100%);
+	position: absolute;
+	top: 370px;
+	left: 320px;
+	/*animation*/
+	animation: underline-right 1.8s cubic-bezier(.16,.73,.07,1) 5s both;
+	transform-origin: left;
+}
+
+@keyframes underline-right {
+	0% {opacity: 0; transform: scaleX(0) skewX(0deg);}
+	100% {opacity: 1; transform: scaleX(1) skew(-50deg);}
+	
+}
