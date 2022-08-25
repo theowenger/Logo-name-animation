@@ -14,7 +14,7 @@ body {
 	height: 600px;
 	margin-left: auto;
 	margin-right: auto;
-	border: 1px white solid;
+	border: 1px transparent solid;
 }
 .name {
 	display: flex;
@@ -52,13 +52,15 @@ body {
 	100% {opacity: 1; transform: scaleX(1.0); }
 }
 .underline {
+	position: relative;
+	bottom: 240px;
+	left: 20px;
 	width: 363px;
 	height: 5px;
 	color: white;
 	background: linear-gradient(90deg, rgba(255,255,255,1) 70%, rgba(0,0,0,1) 95%, rgba(0,0,0,1) 100%);
-	position: absolute;
-	top: 370px;
-	left: 320px;
+	margin-left: auto;
+	margin-right: auto;
 	/*animation*/
 	animation: underline-right 1.8s cubic-bezier(.16,.73,.07,1) 5s both;
 	transform-origin: left;
